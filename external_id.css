@@ -1,4 +1,32 @@
-#a123{
-	background-color: yellow;
-	font-family: cursive;
+h6{
+	font-size: 60px;
 }
+
+a:link{
+	color:blue;
+	font-family:cursive;
+}
+a:visited{
+	color:hotpink;
+}
+
+a:hover{
+	color:red;
+	font-size:67px;
+}
+a:active{
+	color:yellow;
+}
+div:hover{
+	height: 300px;
+	weight:300px;
+    color: deepskyblue;
+
+}
+div{
+	height: 20px;
+	weight: 50px;
+	color: yellow;
+}
+
+

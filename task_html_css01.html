@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<style>
+pre {
+  display: grid;
+  font-family:Courier new;
+  white-space: pre;
+  margin: 1em 0;
+  color:grey;
+} 
+</style>
+<style>
+	code{
+		font-family: monospace;
+		align-content: center;
+	}
+</style>	
+	<title>task_html_css</title>
+
+</head>
+<body>
+	<center><img src="EPAM.jpg" height="200"
+		width="200"></center>
+	<h1>HTML ELEMENTS</h1>
+	<a href=#home>Home</a>
+	&nbsp
+	&nbsp
+	&nbsp
+	<a href=#heading>Headers</a>
+	&nbsp
+	&nbsp
+	&nbsp
+	<a href=#Tables>Table</a>
+	&nbsp
+	&nbsp
+	&nbsp
+	<a href=#text>Text_Formatting</a>
+	&nbsp
+	&nbsp
+	&nbsp
+	<a href="#list">Lists</a>
+	&nbsp
+	&nbsp
+	&nbsp
+	<a href="#formats">Text Formats</a>
+	&nbsp
+	&nbsp
+	<a href="#block">Blockquotes</a>
+	<hr>
+	<p id="home">Pay attention to lii tag inside section element. Font-size for lii is the sanie as font-size for li2, because we have to use only one hi on the page, and it is commonly used inside header<br><br><br></p>
+	<p id="heading"><h1>Heading1</h1>
+	<h2>Heading2</h2>	
+	<h3>Heading3</h3>
+	<h4>Heading4</h4>
+	<h5>Heading5</h5>
+	<h6>Heading6</h6></p>
+	<br><br><hr>
+	<p id ="text">The College is situated in an eco-friendly <u>area of 180 acres</u> with thick greenery at Surampalem, Gandepalli Mandal, East Godavari District,<b> Andhra Pradesh</b>. <mark>The College is 15 KM away from Samalkot Railway Station on Howrah-Chennai Railway line in South Central Railway</mark>.. The College is 35 Km away from <i>Samalkota</i>,Kakinada and Rajahmundry on ADB Road.<em>The College has four academic <del>Buildings with a total carpet area of 44,524 Sq. Mts.</del> apart from two boys hostels and one girls hostel buildings. <small>The particulars of academic buildings and the departments / offices accommodated are as follows</small>.</em>The dreams of its bounding fathers took shape in <big>2004</big> in the form of <u>Sri Sai Aditya Institute of Science and Technolgy</u> which is now renamed as Aditya College of Engineering and Technology under G.O.RT.NO:92 with approval of AICTE in the aegis of Sarojini Educational Society,Kakinada and permanently affiliated to JNTU Kakinada. The college has two academic buildings apart from two boy’s hostels and one girl’s hostel buildings 1<sup>st</sup>......H<sub>2O</sub></p>
+	<br><br><hr><br><br>
+	<h1 id="Tables">Table</h1>
+	<table style="width: 100%;">
+		<thead>
+			<tr>
+				<th>High_Brand</th>
+				<th>Medium_Brand</th>
+				<th>Low_Brand</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Louis Vuiton</td>
+				<td>Sugar Cosmetics</td>
+				<td>The Moms Co</td>
+			</tr>
+			<tr>
+				<td>Channel</td>
+				<td>Rare Beauty</td>
+				<td>Himalaya</td>
+			</tr>
+			<tr>
+				<td>Gucci</td>
+				<td>Alps Goodness</td>
+				<td>Ponds</td>
+			</tr>
+		</tbody>
+	</table>
+	<br><br>
+	<h1 id="list">Unordered List</h1>
+	<ul>
+		<li>Akhila</li>
+		<li>Greeshma</li>
+		<ul>
+			<li>449</li>
+		</ul>
+		<li>Aditya</li>
+	</ul>
+	<h1>Ordered List</h1>
+	<ol>
+		<li>422</li>
+		<li>434</li>
+		<ol type="A">
+			<li>567</li>
+		</ol>
+		<li>449</li>
+	</ol>
+	<h1>Definition list</h1>
+	<dl>
+	<dt><h3>Numbers</h3></dt>
+	<dd>1234</dd>
+	<dt><h3>Text</h3></dt>
+	<dd>hi all</dd>
+	</dl>	
+	<br>
+	<label>Details</label>
+		<select>
+			<option>HTML</option>
+			<option>CSS</option>
+			<option>REACT JS</option>
+		</select>
+	<br><br><hr><br>
+	<h1 id="formats">Text Formats</h1>
+	&nbsp
+	<h3>Article Text</h3>
+	&nbsp
+	&nbsp
+	<h5>Article title</h5>
+	&nbsp
+	<h6>Article description</h6>
+	<br>
+	<br>
+	<h1>Preformatted Text</h1>
+	<pre>
+			Text in a pre element
+		is displayed in a fixed-width
+		font, and it preserves
+		both      spaces and
+		line breaks
+</pre>
+	<h1>code</h1>
+	<p><code>
+		.wrapper{
+		display:flex;<br>
+		vertical-align:middle;<br>
+		justify-content: center;<br>
+	}</code></p>
+	<h1 id="block">Blockquotes</h1>
+	<p>Let’s keep it simple. Italics are good to help set it off ft om the body text. Be sane to sryle the citation.
+	<br><br>
+	"if you go back a few hundred years,what we take for granted today would seem like magic-being able to talk to people over long distances,to transmit images,flying,accessing vast amounts of data like an oracle.These are all things that would have been considered magic a few hundred years ago"
+	<a href="https://en.wikipedia.org/wiki/ElonMusk>">Elon Musk</a>
+	<br>
+	<br>
+	<form align="right">
+	<label>First name:</label>
+		<input type="text" autofocus>
+		<br>
+		<br>
+		<label>Surname</label>
+		<input type="text">
+		<br>
+		<br>
+		<label>Email</label>
+		<input type="email">
+		<br><br>
+		<textarea style="height: 150px;width: 150px;"></textarea>
+		<br>
+		<label>&nbsp</label>
+		<input type="Submit">
+	</form>	
+</p>
+</body>
+</html>
