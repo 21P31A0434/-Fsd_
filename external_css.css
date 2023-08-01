@@ -1,0 +1,17 @@
+.one {
+  --mask: radial-gradient(40px at 40px 40px,#0000 98%,#000) -40px -40px;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+    border:10px double brown ;      
+}
+.box {
+  text-align: center;
+  height: 100px;
+  width: 700px;
+  aspect-ratio:1;
+  display:inline-block;
+  background:linear-gradient(orange,firebrick);
+  border:10px double brown;
+  padding: 40px;
+ 
+}

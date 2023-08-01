@@ -1,32 +1,157 @@
-h6{
-	font-size: 60px;
-}
-
-a:link{
-	color:blue;
-	font-family:cursive;
-}
-a:visited{
-	color:hotpink;
-}
-
-a:hover{
-	color:red;
-	font-size:67px;
-}
-a:active{
-	color:yellow;
-}
-div:hover{
-	height: 300px;
-	weight:300px;
-    color: deepskyblue;
-
+/*div{
+	background-color: skyblue;
+	border:5px red;
+	outline: dotted black;
+	height: 400px;
+	width:400px;
+	text-align: center;
 }
 div{
-	height: 20px;
-	weight: 50px;
-	color: yellow;
+	text-align: center;
+	height:100px;
+	width: 800px;
+	outline: 10px dashed red; box-shadow: 0 0 0 10px skyblue;
+}
+width: 200px;
+height: 100px;
+
+-webkit-mask-image:
+     radial-gradient(circle at top left, transparent 0, transparent  20px, black 21px),
+     radial-gradient(circle at top right, transparent 0, transparent  20px, black 21px),
+     radial-gradient(circle at bottom left, transparent 0, transparent  20px, black 21px),
+     radial-gradient(circle at bottom right, transparent 0, transparent  20px, black 21px);
+-webkit-mask-position: top left, top right, bottom left, bottom right;
+-webkit-mask-repeat: no-repeat;
+-webkit-mask-size: 50% 50%;
+mask-image:
+    radial-gradient(circle at top left, transparent 0, transparent 20px, black 21px),
+    radial-gradient(circle at top right, transparent 0, transparent 20px, black 21px),
+    radial-gradient(circle at bottom left, transparent 0, transparent 20px, black 21px),
+    radial-gradient(circle at bottom right, transparent 0, transparent 20px, black 21px);
+mask-position: top left, top right, bottom left, bottom right;
+mask-repeat: no-repeat;
+mask-size: 50% 50%;
+
+.one {
+  --mask: radial-gradient(40px at 40px 40px,#0000 98%,#000) -40px -40px;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
+    border:10px double brown ;      
+}
+.box {
+  text-align: center;
+  height: 100px;
+  width: 700px;
+  aspect-ratio:1;
+  display:inline-block;
+  background:linear-gradient(orange,firebrick);
+  border:10px double brown;
+  padding: 40px;
+ 
 }
 
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.grid-item1 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px dashed rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item3 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px dotted rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item4 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px groove rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item5{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px ridge rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item6 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px inset rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item7 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px outset rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item8 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px none rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.grid-item9 {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 5px hidden rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}*/  
+#a{
+  height: 400px;
+  width:200px;
+  border: 5px solid black;
+  float: left;
+  margin-top: 20px;
+
+}
+#b{
+  height: 400px;
+  width:200px;
+  border: 5px solid black;
+  margin: 20px;
+  float: left;
+
+}
+
+#c{
+  height: 400px;
+  width:200px;
+  border: 5px solid black;
+  float: right;
+  margin-top: 20px;
+
+}
+#d{
+  height: 400px;
+  width:700px;
+}
 
