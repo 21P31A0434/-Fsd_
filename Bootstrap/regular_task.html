@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>regular_expression</title>
+</head>
+<body>
+	<h3>Regular Expression</h3>
+	<input type="text" name="" id="in_id">
+	<button onclick="check_numornot()">check validity</button>
+	<button onclick="check_charornot()">check validity</button>
+	<br>
+	<span id="msg_id"></span>
+	<script type="text/javascript">
+		function check_numornot(){
+			re=/^[8][0-9]{9}$/
+			let n= document.getElementById('in_id').value;
+			output=re.test(n);
+			if(output==true){
+				document.getElementById('msg_id').innerText='Correct';
+				document.getElementById('msg_id').style.color='green';
+			}else{
+				document.getElementById('msg_id').innerText='Please enter Valid details';
+				document.getElementById('msg_id').style.color='red';
+			}
+		}
+		function check_charornot(){
+			re1=/^[a-z]+$///only small letters
+			re1=/^[A-Z]+$///only capital letters
+			re1=/^[a-zA-Z]+$///small and big letters
+			re1=/^[a-zA-Z0-9]+$///alpha numeric characters
+			re1=/^\w+@[a-zA-Z_]/
+
+
+		}
+	</script>
+</body>
+</html>
