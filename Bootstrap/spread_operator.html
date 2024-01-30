@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>spread_operator</title>
+</head>
+<body>
+	<h3>Spread Operator</h3>
+<script type="text/javascript">
+	//---------1st way------//
+	let arr=[1,2,3,4,5,6];
+	//console.log(arr)
+	//console.log(...arr)
+	//---------2nd way----//
+	let arr1=[7,8,...arr];
+	console.log(arr1)
+	//-------3rd way------//
+	let arr2=[1,2,3,4];
+	let arr3=[5,6,7,8];
+	let arr4=[...arr2,9,10,...arr3,11,12];
+	console.log(arr4)
+	//------4th way-----//
+	let str='drive ready';
+	console.log(str);
+	console.log(...str);
+	function sum(a,b,c,d){
+		console.log(a+b+c+d)
+	}
+	let arr5=[10,20,30,40,50];
+	sum(...arr5)
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>bootstrap_task01</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    	*{
+    		margin:0px;
+    		padding:0px;
+    	}
+    	.btn-space 
+    	{
+    		margin-right: 15px;
+		}
+		.container-fluid{
+			background:lightgrey;
+			height:800px;
+		}
+		.col-6{
+			padding:100px;
+			background:green;
+		}
+		.row{
+			height:700px;
+		}
+		.card1{
+			position:relative;
+			top:30px;
+			left:200px;
+			padding:150px;
+			padding-right:220px;
+			background: whitesmoke;
+			height:100px;
+			width:200px;
+			float:left;
+		}
+		.card2{
+			position:relative;
+			top:30px;
+			right:200px;
+			background: whitesmoke;
+			padding:150px;
+			padding-right: 300px;
+			padding-left:100px;
+			height:100px;
+			width:200px;
+			float:right;
+		}
+		.card3{
+			position:relative;
+			top:400px;
+			right:160px;
+			padding:150px;
+			padding-right:220px;
+			background: whitesmoke;
+			height:200px;
+			width:200px;
+			float:left;
+		}
+		.card4{
+			position:relative;
+			top:100px;
+			right:190px;
+			padding:150px;
+			padding-right: 300px;
+			padding-left:100px;
+			background: whitesmoke;
+			height:200px;
+			width:200px;
+			float:right;
+		}
+		.img{
+			height:70px;
+			border :5px solid blue;
+			margin:20px;
+			border-radius:50%;
+			position:relative;
+			bottom:150px;
+			right:70px;
+		}
+		span{
+			position:relative;
+			bottom:235px;
+			left:30px;
+			font-size:20px;
+		}
+		p{
+			position:relative;
+			bottom:220px;
+			left:30px;
+			font-size:20px;
+		}
+		.a{
+			position:relative;
+			right:450px;
+			bottom:336px;
+		}
+		.b{
+			position:relative;
+			bottom:200px;
+		}
+    </style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row-mt-5">
+			<nav class="navbar navbar-expand-sm bg-light justify-content-center">
+		  	<ul class="navbar-nav">
+			    <li class="nav-item">
+			     	<button type="button" class="btn btn-success btn-space">Preview</button>
+			    </li>
+			    <li class="nav-item">
+			      <button type="button" class="btn btn-info btn-space">HTML</button>
+			    </li>
+			    <li class="nav-item">
+			      <button type="button" class="btn btn-info btn-space">CSS</button>
+			    </li>
+			    <li class="nav-item">
+			      <button type="button" class="btn btn-info btn-space">Download</button>
+			    </li>
+			    <li class="nav-item">
+			      <button type="button" class="btn btn-danger btn-space">Actions</button>
+			    </li>
+			</ul>
+			</nav>
+		</div>	
+		<div>
+		<div class="card1">
+	  		<div class="card-body">
+	  			<img src="img1.png" class="img">
+	  			<span>Johndoe</span>
+	  			<br>
+	  			<p>iefi</p>
+	  			<br>
+	  			<p class="b">Anton Knudsen<br><p class="a">MAY 14</p>
+    				
+	  		</div>
+		</div>	
+		<div class="card2">
+	  		<div class="card-body">
+	  			<img src="img2.png" class="img">
+	  			<span>Userdoe</span>
+	  			<br>
+	  			<p>fn43infc</p>
+	  			<br>
+	  			<p class="b">Anton Knudsen<br><p class="a">MAY 14</p>
+	  		</div>
+		</div>
+		<div class="card3">
+  			<div class="card-body">
+  				<img src="img3.png" class="img">
+  				<span>Baedoe</span>
+  				<br>
+  				<p>4dni4n</p>
+	  			<br>
+	  			<p class="b">Anton Knudsen<br><p class="a">MAY 14</p>
+  			</div>
+		</div>
+		<div class="card4">
+  			<div class="card-body">
+  				<img src="img4.png" class="img">
+  				<span>Bffdoe</span>
+  				<br>
+  				<p>j4fi4</p>
+  				<br>
+  				<p class="b">Anton Knudsen<br><p class="a">MAY 14</p>
+  			</div>
+		</div>
+
+	</div>
+</body>
+</html>    

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>regular_expression</title>
+</head>
+<body>
+	<h2>Regular Expression</h2>
+	<script type="text/javascript">
+		//let str='akhila';
+		let re = /batch/;
+		let output = re.test("fullstack batch")
+		console.log(output);
+		let re1=/batch/i;
+		let output1=re1.test("fullstack Batch");
+		console.log(output1);
+		re2=/^b/;
+		output2=re2.test("batch");
+		output2=re2.test("fbatch");
+		console.log(output2);
+		re3=/batch/g;
+		res=re3.exec("full stack course batch");
+		console.log(res);
+		console.log(res.index)
+		res=re.exec("full stack batch");
+		console.log(res.index);
+		re4=/^[9][0-9]{9}$///starting with number 9
+		re4=/^[0-9]{10}/
+		output3=re4.test("9701977841");
+		console.log(output3)
+	</script>
+</body>
+</html>
