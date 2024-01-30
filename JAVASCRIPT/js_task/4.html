@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4th task</title>
+</head>
+<body>
+      <script type="text/javascript">
+      function EvenOddSums(number) {
+        let evenSum = 0;
+        let oddSum = 0;
+
+        for (let i = 0; i < number.length; i++) {
+          if (number[i] % 2 === 0) {
+            evenSum += number[i];
+          } else {
+            oddSum += number[i];
+          }
+        }
+
+        return {
+          evenSum: evenSum,
+          oddSum: oddSum
+        };
+      }
+
+      const Arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const { evenSum, oddSum } = EvenOddSums(Arr);
+
+      document.write("Even Sum:", evenSum);
+      document.write("<br>");
+      document.write("Odd Sum:", oddSum);
+
+      </script>
+</body>
+</html>

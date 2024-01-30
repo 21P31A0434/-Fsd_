@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Table</title>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  td.editing {
+    background-color: whitesmoke;
+  }
+  #h{
+    background-color: skyblue;
+    border-radius: 25px;
+    border:1px solid skyblue;
+    color: whitesmoke;
+    position:relative;
+    left:250px;
+  }
+</style>
+</head>
+<body>
+<center> 
+<h2>Product Details</h2>&nbsp<button onclick="addRow()" id="h">+Add row</button> 
+<p>To edit the exixting cell click on the particular cell</p>
+<p>To edit the new row click on the edit action</p> 
+</center>
+<table id="editable-table">
+  <tr>
+    <th>Product id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <td>12345</td>
+    <td>iphone</td>
+    <td>50000</td>
+    <td><button onclick="editRow(this)"><i class="fa-solid fa-pen"></i></button>&nbsp<button onclick="deleteRow(this)"><i class="fa-solid fa-trash"></i></button></td>
+  </tr>
+  <tr>
+    <td>678910</td>
+    <td>Samsung</td>
+    <td>35000</td>
+    <td><button onclick="editRow(this)"><i class="fa-solid fa-pen"></i></button>&nbsp<button onclick="deleteRow(this)"><i class="fa-solid fa-trash"></i></button></td>
+  </tr>
+  <tr>
+    <td>13141516</td>
+    <td>Realme</td>
+    <td>27000</td>
+    <td><button onclick="editRow(this)"><i class="fa-solid fa-pen"></i></button>&nbsp<button onclick="deleteRow(this)"><i class="fa-solid fa-trash"></i></button></td>
+  </tr>
+
+</table>
+
+<script>
+const table = document.getElementById("editable-table");
+
+table.addEventListener("click", function(event) {
+  const target = event.target;
+
+  // Check if the clicked element is a table cell
+  if (target.tagName === "TD") {
+    // Toggle editing mode
+    if (!target.classList.contains("editing")) {
+      target.classList.add("editing");
+      const currentValue = target.textContent;
+      const input = document.createElement("input");
+      input.value = currentValue;
+      target.innerHTML = "";
+      target.appendChild(input);
+      input.focus();
+
+      input.addEventListener("keydown", function(e) {
+        if (e.key === "Enter") {
+          target.classList.remove("editing");
+          target.innerHTML = input.value;
+        }
+      });
+
+      // Stop editing when clicking outside the cell
+      table.addEventListener("click", function(e) {
+        if (e.target !== target && e.target !== input) {
+          target.classList.remove("editing");
+          target.innerHTML = input.value;
+        }
+      });
+    }
+  }
+});
+        function addRow() {
+          const table = document.getElementById("editable-table");
+          const newRow = table.insertRow();
+          const idCell = newRow.insertCell(0);
+          const nameCell = newRow.insertCell(1);
+          const priceCell = newRow.insertCell(2);
+          const actionCell = newRow.insertCell(3);
+          idCell.innerHTML = '<input type="number">';
+          nameCell.innerHTML = '<input type="text">';
+          priceCell.innerHTML = '<input type="number">';
+          actionCell.innerHTML = '<button onclick="editRow(this)"><i class="fa-solid fa-pen"></i></button> <button onclick="deleteRow(this)"><i class="fa-solid fa-trash"></i></button>';
+        }
+        function editRow(button) {
+          const row = button.parentNode.parentNode;
+          const id = row.cells[0].querySelector('input').value;
+          const name = row.cells[1].querySelector('input').value;
+          const price = row.cells[2].querySelector('input').value;
+          
+          row.cells[0].innerHTML = id;
+          row.cells[1].innerHTML = name;
+          row.cells[2].innerHTML = price;
+          row.cells[3].innerHTML = '<button onclick="editRow(this)"><i class="fa-solid fa-pen"></i></button> <button onclick="deleteRow(this)"><i class="fa-solid fa-trash"></i></button>';
+        }
+
+        function deleteRow(button) {
+        var l = confirm('Do you really wanted to delete?');
+          if (l == true){
+          const row = button.parentNode.parentNode;
+          row.parentNode.removeChild(row);
+        }
+        }
+
+</script>
+
+</body>
+</html>

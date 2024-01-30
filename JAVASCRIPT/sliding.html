@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>sliding</title>
+</head>
+<body>
+	<center>
+		<button onclick="nextimg()">Increased by 1</button>
+      <button onclick="previmg()">Decreased by 1</button>
+      <p id="imgtag">
+		<img src="img1.png" style="width:200px;height: 200px;">
+	</p>
+      <script type="text/javascript">
+        var i=1;
+        function nextimg(){
+          if(i<4){
+          	var res = ++i
+            document.getElementById('imgtag').innerHTML="<img src="+res+".png'>";
+          }
+        }
+        function previmg(){
+          if(i>-2){
+            document.getElementById('imgtag').innerHTML="img src="+res+".png>";
+          }
+        }
+      </script>
+	</center>	
+</body>
+</html>

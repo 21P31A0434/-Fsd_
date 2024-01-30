@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>keyup</title>
+	<style type="text/css">
+		input{
+			outline:none;
+		}
+	</style>
+</head>
+<body>
+	<label>Enter Name</label>
+	<input type="text" onkeyup="sam(this.value)" id="input1" >    
+	<br>
+	<span id="sp_id"></span>
+	<script type="text/javascript">
+		function sam(str){
+			if(str.length<4){
+				document.getElementById('input1').style.border =' 4px solid red';
+				document.getElementById('sp_id').textContent = "Please enter your name";
+				document.getElementById('sp_id').style.color='red';
+			}else{
+				document.getElementById('sp_id').textContent = " ";
+			}
+		}
+	</script>
+</body>
+</html>

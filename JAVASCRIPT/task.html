@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		img{
+			height:500px;
+			width:500px;
+		}
+	</style>
+</head>
+<body>
+	<center>
+	<img src="candle.jpg" id="image1" onmouseover="changeimage()" >
+	<script type="text/javascript">
+		function changeimage(){
+			let d=document.getElementById('image1')
+			if(d.src.match('candle.jpg')){
+				d.src='candle2.jpg'
+			}else{
+				d.src='candle.jpg'
+			}
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array_methods</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const a = [1,2,3,4,5,6,7,8,9];
+		const b = [10,11,12,13,14,15];
+		const c = [1,2,3];
+		const d = [1,2,3,4]; 
+			// forEach to print each element
+			document.write("forEach:");
+			a.forEach(num => document.write(num));
+			document.write("<br>")
+			//map to double each element
+			const dNumbers = a.map(num => num * 2);
+			document.write("map (doubled):", dNumbers);
+			document.write("<br>")
+			//filter to get even numbers
+			const eNumbers = a.filter(num => num % 2 === 0);
+			document.write("filter (even):", eNumbers);
+			document.write("<br>")
+			// reduce to calculate the sum
+			const sum = a.reduce((acc, num) => acc + num, 0);
+			document.write("reduce (sum):", sum);
+			document.write("<br>")
+			// every to check if all elements are less than 10
+			const lessThanTen = a.every(num => num < 10);
+			document.write("every (all less than 10):", lessThanTen);
+			document.write("<br>")
+			// some to check if any element is greater than 7
+			const greaterThanseven = a.some(num => num > 7);
+			document.write("some (any greater than 8):", greaterThanseven);
+			document.write("<br>")
+			//find to get the first element greater than 5
+			const greaterThanFive = a.find(num => num > 5);
+			document.write("find (first greater than 5):", greaterThanFive);
+			document.write("<br>")
+			//findIndex to get the index of the first element greater than 5
+			const firstIndexGreaterThanFive = a.findIndex(num => num > 5);
+			document.write("findIndex (index of first greater than 5):", firstIndexGreaterThanFive);
+			document.write("<br>")
+			// sort to sort the elements in ascending order
+			const sorted_Numbers = a.slice().sort((a, b) => a - b);
+			document.write("sort (ascending):", sorted_Numbers);
+			document.write("<br>")
+			//reverse to reverse the array
+			const reverse_Numbers = a.slice().reverse();
+			document.write("reverse:", reverse_Numbers);
+			document.write("<br>")
+			// includes to check if the array includes 7
+			const includes_sSeven = a.includes(7);
+			document.write("includes (7):", includes_sSeven);
+			document.write("<br>")
+			//indexOf to get the index of the first occurrence of 4
+			const index_Four = a.indexOf(4);
+			document.write("indexOf (first occurrence of 4):", index_Four);
+			document.write("<br>")
+			// concat() to concatenate arrays
+			const c_Array = a.concat(b);
+			document.write("Concatenated Array:", c_Array);
+			document.write("<br>")
+			//push() to add elements to the end of an array
+			c.push(4);
+			document.write("Array after push:", c);
+			d.push(5, 6,7,8,9,10);
+			document.write("Array after push:", d);
+			document.write("<br>")
+			//join() to create a string from array elements
+			const e = ["watermelon", "bananaa", "orange","pomoganate"];
+			const f = e.join("Juice ..! ");
+			document.write("Fruits :", f);
+			document.write("<br>")
+			//fill() to replace array elements with a specific value
+			const g = [4,3,4];
+			document.write(" array:", g);
+			g.fill(5,6,7);
+			document.write("after fill(5, 6, 7):", g);
+			document.write("<br>")
+			//pop() to remove and return the last element of an array
+			const h = ["A","B","C","D"];
+			document.write("Original array:", h);
+			const popele = h.pop();
+			document.write("Popped element:", popele);
+			document.write("after pop:", h);
+			document.write("<br>")
+			//unshift() to add elements to the beginning of an array
+			a.unshift(10, 20);
+			document.write("Arr after unshift(10,20):", a);
+			document.write("<br>")
+			//shift() to remove and return the first element of an array
+			const shiftElement = h.shift();
+			document.write("Shifted element:", shiftElement);
+			document.write("Queue after shift:", h);
+	</script>
+</body>
+</html>

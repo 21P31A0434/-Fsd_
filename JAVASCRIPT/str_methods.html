@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String Methods</title>
+</head>
+<body>
+	<h1>STRING METHODS</h1>
+	<script type="text/javascript">
+		let str = 'full stack';
+		function ss(str_name){
+			document.write(str_name);
+		}
+		document.write("<h4>Sub str</h4>");
+		ss("substring method = "+str.substr(3,7))
+		document.write("<h4>Slice</h4>");
+		ss("slice method = "+str.substring(-1,7))
+		document.write("<h4>Replace</h4>");
+		ss("Replace ="+str.replace("full stack" ,"akhila"))
+		document.write("<h4>To Lower Case</h4>");
+		let str2 = 'FULL STACK'
+		ss("lower case ="+str2.toLocaleLowerCase())
+		document.write("<h3>To Upper Case</h3>");
+		ss("UPPER CASE ="+str2.toLocaleUpperCase())
+		document.write("<h4>Index Of</h4>");
+		ss("Index of ="+str.indexOf('a'))
+		document.write("<h4>Includes</h4>");
+		ss("Includes method ="+str.includes('full'))
+		ss("Includes method ="+str.includes('ready'))
+		document.write("<h4>Slice</h4>");
+		let str3 = 'akhil';
+		ss("slice method = "+str3.slice(0,4))
+		document.write("<h4>concate</h4>");
+		let str4 = ' akhila'
+		let str5 = ' lanka'
+		ss("concate string ="+str3.concat(str4,str5));
+		document.write("<h4>Last Index Of</h4>");
+		ss(" Last Index of ="+str.lastIndexOf('l'))
+		document.write("<h4>Char Code at</h4>");
+		ss(" Last Index of ="+str.charCodeAt('f'))
+		document.write("<h4>Trim Method</h4>");
+		let str1 = 'AKHILA'
+		ss("Trim Method ="+str1.trim())
+		document.write("<h4>Char At method</h4>");
+		ss("Char At method ="+str.charAt(5))
+		document.write("<h4>Value Of</h3>");
+		ss("Value of ="+str.valueOf())
+		document.write("<h4>Split</h4>");
+		let str8 = 'siva*suseela*akhila';
+		document.write(str8.split("*"));
+		document.write("<h4>To string</h4>");
+		const no = 34;
+		const noasString = no.toString();
+		document.write("Number as String:", noasString);
+		document.write("<h4>Match</h4>");
+		const match = str2.match(/S/g);
+		document.write("Matches of 'S':", match);
+		document.write("<h4>Search</h4>");
+		const search =str2.search(/LL/g);
+		document.write("Index of 'LL':", search);
+
+
+	</script>
+</center>
+
+</body>
+</html>

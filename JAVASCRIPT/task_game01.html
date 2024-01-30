@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Guessing Game</title>
+</head>
+<body>
+<center>  
+<button>1</button>
+<button>2</button>
+<button>3</button>
+<button>4</button>
+<button>5</button>
+<button>6</button>
+<button>7</button>
+<button>8</button>
+<button>9</button>
+<button>10</button>
+<form id="guessForm">
+  <input type="radio" name="guess" value="1">
+  <input type="radio" name="guess" value="2">
+  <input type="radio" name="guess" value="3">
+  <input type="radio" name="guess" value="4">
+  <input type="radio" name="guess" value="5">
+  <input type="radio" name="guess" value="6">
+  <input type="radio" name="guess" value="7">
+  <input type="radio" name="guess" value="8">
+  <input type="radio" name="guess" value="9">
+  <input type="radio" name="guess" value="10">
+  <br>
+  <button type="button" onclick="checkGuess()">Play</button>
+</form>
+<br>
+<br>
+<textarea id="no"></textarea>
+<p id="result"></p>
+</center>
+<script type="text/javascript">
+
+      function checkGuess() {
+        const selectedValue = document.querySelector('input[name="guess"]:checked');
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+        document.getElementById("no").innerHTML=randomNumber;
+        if (selectedValue) {
+          const userGuess = parseInt(selectedValue.value);
+          const randomNumber = Math.floor(Math.random() * 10) + 1;
+          if (userGuess === randomNumber) {
+            document.getElementById("result").textContent = "Congratulations! You guessed correctly!";
+          } else {
+            document.getElementById("result").textContent = "Oops! Try again!";
+          }
+        } else {
+          document.getElementById("result").textContent = "Please select a number before submitting.";
+        }
+      }
+</script>
+</body>
+</html>

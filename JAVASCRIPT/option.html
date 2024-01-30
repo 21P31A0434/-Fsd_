@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form methods</title>
+</head>
+<body>
+	<center>
+		<form id="myform" onsubmit="Submit()">
+		<label>First Name</label>
+		<input type="text " onclick="sample()">	
+		<br>
+		<br>
+		<label>second Name</label>	
+		<input type="text" onclick="sample()">
+		<br>
+		<br>
+		<select style="width:300px;height:30px" onchange="func(this.value)">
+			<option>---select college---</option>
+			<option value="AEC">AEC</option>
+			<option value="ACET">ACET</option>
+			<option value="ACOE">ACOE</option>
+		</select>
+		<input type="button" onclick="sample()" value="Submit">
+		<input type="button" onclick="reset()" value="Reset">
+		</form>
+		
+	</center>
+	<script>
+		function.sample(){
+			document.getElementById('myform').submit()
+		}
+		function.reset(){
+			document.getElementById('myform').reset()
+		}
+	</script>
+</body>
+</html>
