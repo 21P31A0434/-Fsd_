@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form methods</title>
+</head>
+<body>
+	<center>
+		<form id="myform" onsubmit="return validateForm()">
+		First name: <input type="text" name="fname" id="fname"><br>
+		Second name: <input type="text" name="fname" id="fname">
+		Password: <input type="password" name="fname" id="fname"><br><br>
+		Email: <input type="email" name="ename" id="fname"><br><br>
+		Age:
+		Female<input type="radio" name="fname" id="fname">
+		male<input type="radio" name="fname" id="fname"><br><br>	
+		<br>
+		<br>
+		<br>
+		<select id="clg_id" names="colleges">
+			<option>---select college---</option>
+			<option value="AEC">AEC</option>
+			<option value="ACET">ACET</option>
+			<option value="ACOE">ACOE</option>
+		</select>
+		<br>
+		<br>
+		<input type="submit" value="Submit">
+		<input type="button" onclick="resetform()" value="Reset">
+		</form>
+		
+	</center>
+	<script>
+		function.sample(){
+			document.getElementById('myform').submit()
+		}
+		function.resetform(){
+			document.getElementById('myform').reset()
+		}
+	</script>
+</body>
+</html>

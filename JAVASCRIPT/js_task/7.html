@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>7th task</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function add(a, b) {
+		  return a + b;
+		}
+
+		function subtract(a, b) {
+		  return a - b;
+		}
+
+		const userInput1 = prompt("Enter the first number:");
+		const userInput2 = prompt("Enter the second number:");
+		const number1 = parseFloat(userInput1);
+		const number2 = parseFloat(userInput2);
+
+		if (!isNaN(number1) && !isNaN(number2)) {
+		  const operation = prompt("Enter 'add' to add or 'subtract' to subtract:");
+
+		  if (operation === "add") {
+		    const result = add(number1, number2);
+		    document.write(` Sum: ${result}`);
+		  } else if (operation === "subtract") {
+		    const result = subtract(number1, number2);
+		    document.write(`subtraction: ${result}`);
+		  } else {
+		    document.write("Invalid operation.");
+		  }
+		} else {
+		  document.write("Invalid input. Please enter valid numbers.");
+		}
+
+	</script>
+</body>
+</html>

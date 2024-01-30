@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  #cake-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  #cake-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .cake-piece {
+    position: absolute;
+    background-color: #f8e0b5;
+    transition: width 0.3s;
+  }
+</style>
+</head>
+<body>
+
+<div id="cake-container">
+  <img id="cake-image" src="cake.jpg" alt="Cake">
+</div>
+
+<script>
+const cakeContainer = document.getElementById('cake-container');
+const cakeImage = document.getElementById('cake-image');
+
+cakeContainer.addEventListener('mousemove', (event) => {
+  const mouseX = event.clientX - cakeContainer.getBoundingClientRect().left;
+  const cakeWidth = cakeContainer.offsetWidth;
+  const cutPercentage = (mouseX / cakeWidth) * 100;
+
+  cakeImage.style.clipPath = `polygon(0 0, ${cutPercentage}% 0, ${cutPercentage}% 100%, 0 100%)`;
+});
+</script>
+
+</body>
+</html>

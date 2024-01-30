@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>button_task</title>
+</head>
+<body>
+	<div id="mydiv"> hello all </div>
+	<button onclick="func()">show</button>
+	<button onclick="func()">hide</button>
+		<script type="text/javascript">
+			function func(){
+				var x = document.getElementById('mydiv');
+				if(x.style.display==="block")
+				{
+					x.style.display="none";	
+				}
+				else{
+					x.style.display="block";
+				}
+			}
+		</script>
+</body>
+</html>

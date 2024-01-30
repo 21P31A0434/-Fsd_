@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .slider-container {
+    width: 120%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-images {
+    width: 700%;
+    display: flex;
+    transition: transform 1s ease-in-out;
+  }
+  
+  .slider-image {
+    width: 20%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider-images">
+    <div class="slider-image">
+      <img src="1.png" alt="No image">
+    </div>
+    <div class="slider-image">
+      <img src="2.png" alt="No image">
+    </div>
+    <div class="slider-image">
+      <img src="3.png" alt="No image">
+    </div>
+    <div class="slider-image">
+      <img src="4.png" alt="No image">
+    </div>
+    <!-- Add more images here!!!!......... -->
+  </div>
+</div>
+
+<script>
+  const sliderImages = document.querySelector('.slider-images');
+  const sliderImageWidth = document.querySelector('.slider-image').clientWidth;
+  let slideIndex = 0;
+
+  function slideNext() {
+    slideIndex = (slideIndex + 1) % sliderImages.children.length;
+    updateSliderPosition();
+  }
+
+  function updateSliderPosition() {
+    const offset = -slideIndex * sliderImageWidth;
+    sliderImages.style.transform = `translateX(${offset}px)`;
+  }
+
+  setInterval(slideNext, 3000); // Change slide every 3 seconds
+</script>
+
+</body>
+</html>

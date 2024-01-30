@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String</title>
+</head>
+<body>
+	<center>
+	<h1>STRING METHODS</h1>
+	<table border=' ' cellspacing="1">
+		<tr>
+			<td>a</td>
+			<td>k</td>
+			<td>h</td>
+			<td>i</td>
+			<td>l</td>
+			<td>&nbsp</td>
+			<td>c</td>
+			<td>h</td>
+			<td>a</td>
+			<td>n</td>
+			<td>d</td>
+			<td>i</td>
+			<td>n</td>
+			<td>i</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+			<td>12</td>
+			<td>13</td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+		let str='AkHila';
+		function ss(str_name){
+			document.write("<b>"+str_name+"</b></br>");
+		}
+		ss("String="+str)
+		ss("String length="+str.length)
+		ss("String length="+str[2])
+		ss("Char at method="+str.charAt(4))
+		ss("Index of="+str.indexOf('c'))
+		ss("Last Index of="+str.lastIndexOf('h'))
+		ss("string_trim="+str.trim())
+		ss("string_toLowercase="+str.toLowerCase())//lowercase
+		ss("string_toUppercase="+str.toUpperCase())//uppercase
+		let str1='hello&ewwwww';
+		let str2='ushhhh';
+		let str3='ewwwww';
+		ss("concatinate string="+str.concat(str2,str3));//adds
+		let str4='jhklj,';
+		console.log(str1.split("&"))//checks & and give a space at place of &
+		console.log(str1.startsWith(('h')))//true
+		console.log(str1.endsWith(('w')))//true
+		console.log(str1.endsWith(('c')))//false
+		//stringname.slice()
+		ss("slice method ="+str.slice('1,4'))//(1,4,-1)=1,3
+		ss("slice method ="+str.slice('-3'))//4,1=1,4//riv
+		//substring method
+		//it allows positive indexes
+		ss("slice method ="+str.substring(1,4))
+		ss("slice method ="+str.substring(4,1))
+		ss("slice method ="+str.substring(-1))
+	</script>
+	</center>
+</body>
+</html>

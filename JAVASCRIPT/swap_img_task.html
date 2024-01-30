@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Swapping Example using Divs</title>
+  <style>
+    .image-container {
+      display: inline-block;
+    }
+    .button1{
+      position: relative;
+      left:660px;
+      bottom:200px;
+    }
+    .button2{
+      position: relative;
+      left:600px;
+      bottom:350px;
+    }
+  </style>
+</head>
+<body>
+  <div  style="height: 500px; width:600px;border:2px solid black;">
+    <div style="height: 167px; width:600px;">
+      <img id="image1" src="1.png" style="height: 167px; width:600px;">
+    </div>
+    <div style="height: 167px; width:600px;">
+      <img id="image2" src="2.png" style="height: 167px; width:600px;">
+    </div>
+    <div  class="image-container" style="height: 167px; width:600px;">
+      <img id='image3' src="3.png" style="height: 167px; width:600px;">
+    </div>
+  </div>
+  <button id="swapButton" class="button1">Swap--></button>
+  <button id="swapButton1" class="button2"><--Swap</button>
+  <div class="image-container" style="height: 300px; width:400px;border:2px solid blue;float:right; position:relative; bottom:434px;">
+    <img id="image4" src="4.png" style="height: 300px; width:400px;">
+  </div>
+  <script type="text/javascript">
+    // Get references to the elements
+        const image3 = document.getElementById('image3');
+        const image4 = document.getElementById('image4');
+        const swapButton = document.getElementById('swapButton');
+        const swapButton1 = document.getElementById('swapButton1');
+
+        // Store the initial image sources
+        const initialImage3Src = image3.src;
+        const initialImage4Src = image4.src;
+
+        // Function to swap the image sources
+        function swapImages() {
+          const tempSrc = image3.src;
+          image3.src = image4.src;
+          image4.src = tempSrc;
+        }
+
+        // Attach the swapImages function to the button click event
+        swapButton.addEventListener('click', swapImages);
+        swapButton1.addEventListener('click', swapImages);
+
+  </script>
+</body>
+</html>

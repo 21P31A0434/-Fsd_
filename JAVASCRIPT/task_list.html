@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object List Example</title>
+</head>
+<body>
+    <ul id="personList"></ul>
+
+    <script>
+        // Array of person objects
+        var people = [
+            { name: "Akhila", age: 19 },
+            { name: "Greeshma", age: 20 },
+            { name: "Poori", age: 19 },
+        ];
+
+        // Get the ul element by its ID
+        var personList = document.getElementById("personList");
+
+        // Loop through the people array and create list items for each person
+        for (var i = 0; i < people.length; i++) {
+            var person = people[i];
+            var li = document.createElement("li");
+            li.textContent = person.name + " - " + person.age + " years old";
+            personList.appendChild(li);
+        }
+    </script>
+</body>
+</html>

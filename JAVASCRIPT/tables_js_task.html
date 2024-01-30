@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>table_task_js</title>
+</head>
+<body>
+	<table border="">
+		<tr>
+			<th>HTML</th>
+			<th>CSS</th>
+			<th>JAVA SCRIPT</th>
+			<th>BOOT STRAP</th>
+		</tr>
+		<tbody id="tbodyid">
+			
+		</tbody>	
+	</table>
+	<script type="text/javascript">
+		let course = [{
+			'Html':'Tables',
+			'Css':'Style',
+			'JS':'var',
+			'BS':'pt-5'
+		},
+		{
+			'Html':'Tables',
+			'Css':'Style',
+			'JS':'var',
+			'BS':'pt-5'	
+		},
+		{
+			'Html':'Tables',
+			'Css':'Style',
+			'JS':'var',
+			'BS':'pt-5'	
+		}]
+		
+		for(i=0;i<course.length+1;i++)
+		{
+			let tr = document.createElement('tr');
+			let td1 = document.createElement('td');
+			let td2 = document.createElement('td');
+			let td3 = document.createElement('td');
+			let td4 = document.createElement('td');
+			td1.innerText=course[i].Html
+			td2.innerText=course[i].Css
+			td3.innerText=course[i].JS
+			td4.innerText=course[i].BS
+			tr.append(td1)
+			tr.append(td2)
+			tr.append(td3)
+			tr.append(td4)
+			document.getElementById('tbodyid').append(tr)
+		}
+		<!DOCTYPE html>
+<html>
+<head>
+    <title>Object List Example</title>
+</head>
+<body>
+    <ul id="personList"></ul>
+
+    <script>
+        // Array of person objects
+        var people = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 },
+            { name: "Carol", age: 28 },
+            { name: "David", age: 22 }
+        ];  
+
+        // Get the ul element by its ID
+        var personList = document.getElementById("personList");
+
+        // Loop through the people array and create list items for each person
+        for (var i = 0; i < people.length; i++) {
+            var person = people[i];
+            var li = document.createElement("li");
+            li.textContent = person.name + " - " + person.age + " years old";
+            personList.appendChild(li);
+        }
+    </script>
+</body>
+</html>
+
+	</script>
+
+</body>
+</html>

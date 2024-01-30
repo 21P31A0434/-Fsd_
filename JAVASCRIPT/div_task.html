@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Divs Example</title>
+    <style>
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="productContainer"></div>
+
+    <script>
+        // Array of product objects
+        var products = [
+            { name: "Akhila", rno: 434 },
+            { name: "greeshma", rno: 449 },
+            { name: "Poori", rno: 460 },
+        ];
+
+        // Get the product container div by its ID
+        var productContainer = document.getElementById("productContainer");
+
+        // Loop through the products array and create divs for each product
+        for (var i = 0; i < products.length; i++) {
+            var product = products[i];
+            var productDiv = document.createElement("div");
+            productDiv.className = "product";
+            productDiv.innerHTML = "<h2>" + product.name + "</h2><p>Price: $" + product.price + "</p>";
+            productContainer.appendChild(productDiv);
+        }
+    </script>
+</body>
+</html>

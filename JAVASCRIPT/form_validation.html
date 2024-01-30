@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+  <center>
+  <form id="myForm" onsubmit="return validateForm()" method="post">
+  First name: <input type="text" name="fname" id="fname_id"><br><br>
+   Last name: <input type="text" name="lname" id="lname_id"><br><br>
+  Password: <input type="password" name="pname" id="pname_id"><br><br>
+  Email: <input type="email" name="ename" id="ename_id"><br><br>
+  Age:
+  Female<input type="radio" name="f" id="f_id">
+  male<input type="radio" name="m" id="m_id"><br><br>
+  <select name="colleges" id="clg_id">
+    <option value="">--select colleges ---</option>
+    <option value="AEC">AEC</option>
+    <option value="ACET">ACET</option>
+    <option value="ACOE">ACOE</option>
+  </select><br><br>
+  Discription: <textarea type="textarea" name="t" id="t_id"></textarea><br><br>
+
+  <input type="submit" value="Submit">
+  <input type="button" onclick="resetform()" value="Reset">
+
+</form> </center> 
+  <script type="text/javascript">
+
+function validateForm(){
+  let fname = document.getElementById('fname_id').value;
+  let lname = document.getElementById('lname_id').value;
+  let clg = document.getElementById('clg_id').value;
+  let pname = document.getElementById('pname_id').value;
+  let ename = document.getElementById('ename_id').value;
+   let t = document.getElementById('t_id').value;
+  if(fname == ''){
+    alert("please enter first name");
+    return false;
+  }
+  if(lname == ''){
+    alert("please enter last name");
+    return false;
+  }
+  if(pname == ''){
+    alert("please enter the password");
+    return false;
+  }
+  if(ename == ''){
+    alert("please enter the email");
+    return false;
+  }
+  if(clg == ''){
+    alert("please choose college");
+    return false;
+  }
+   if(m== ''){
+    alert("please choose college");
+    return false;
+  }
+  if(t== ''){
+    alert("please enter the discription");
+    return false;
+  }
+  
+}
+function.sample(){
+      document.getElementById('myform').submit()
+    }
+    function.resetform(){
+      document.getElementById('myform').reset()
+    }
+
+
+    </script>
+</body>
+</html>
